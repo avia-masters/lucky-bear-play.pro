@@ -87,6 +87,12 @@ a:hover{color:#7acbff;text-shadow:0 0 25px rgba(74,184,255,.2)}
 .overview-links{display:flex;flex-wrap:wrap;gap:8px 16px}
 .overview-links a{font-size:14px;color:#8aaac8;background:rgba(10,22,40,.4);padding:4px 14px;border-radius:20px;border:1px solid rgba(26,48,80,.3);transition:.3s}
 .overview-links a:hover{border-color:#4ab8ff;color:#4ab8ff}
+
+/* === Блок превью приложения (как во втором файле) === */
+.app-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.app-preview{background:rgba(17,29,53,.6);border:1px solid rgba(26,48,80,.4);border-radius:24px;padding:30px;text-align:center}
+.app-preview img{max-width:280px;width:100%;height:auto;display:block;border-radius:20px;margin:0 auto;background:#0f2040}
+
 .home-overview{display:grid;grid-template-columns:3fr 1fr;gap:40px}
 .prose h2{font-size:26px;background:linear-gradient(135deg,#1a7acc,#4ab8ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:40px 0 12px;padding-top:10px}
 .prose h2:first-child{margin-top:0}
@@ -104,7 +110,6 @@ a:hover{color:#7acbff;text-shadow:0 0 25px rgba(74,184,255,.2)}
 .faq details:hover{border-color:#4ab8ff}
 .faq summary{font-weight:600;color:#fff;cursor:pointer;font-size:17px}
 .faq details p{color:#d0e4f8;padding-top:12px;margin:0}
-.card-media img{width:100%;height:auto;max-height:420px;object-fit:cover;display:block;border-radius:16px;background:#0f2040;border:1px solid rgba(26,48,80,.4);margin:16px 0}
 .footer-cta{background:linear-gradient(145deg,rgba(10,22,40,.8),rgba(15,32,64,.6));border-top:1px solid rgba(26,48,80,.3);border-bottom:1px solid rgba(26,48,80,.3);padding:50px 0}
 .footer-cta .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:30px}
 .footer-cta h2{color:#fff;font-size:28px}
@@ -136,7 +141,7 @@ a:hover{color:#7acbff;text-shadow:0 0 25px rgba(74,184,255,.2)}
 .age-gate-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .age-gate-card a{display:block;margin-top:16px;color:#5a7a9a;font-size:14px}
 @media (max-width:1100px){.main-nav a{font-size:11px;padding:2px 3px}.header-actions .btn{padding:6px 14px;font-size:12px}.brand img{height:30px}}
-@media (max-width:992px){.header-row{flex-wrap:wrap}.main-nav{flex-wrap:wrap;justify-content:center}.hero-grid{grid-template-columns:1fr}.home-overview{grid-template-columns:1fr}.toc-card{position:static}.footer-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:992px){.header-row{flex-wrap:wrap}.main-nav{flex-wrap:wrap;justify-content:center}.hero-grid{grid-template-columns:1fr}.app-grid{grid-template-columns:1fr}.home-overview{grid-template-columns:1fr}.toc-card{position:static}.footer-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:768px){.menu-button{display:block}.main-nav{display:none;width:100%;flex-direction:column;align-items:stretch;padding:16px 0;gap:8px}.main-nav.open{display:flex}.header-actions{width:100%;justify-content:center;padding-top:12px;border-top:1px solid rgba(26,48,80,.3)}.page-hero h1{font-size:30px}.footer-grid{grid-template-columns:1fr}.footer-cta .container{flex-direction:column;text-align:center}.mobile-bar{display:flex}.site-footer{padding-bottom:80px}}
 @media (max-width:480px){.page-hero h1{font-size:24px}.btn.large{padding:12px 24px;font-size:16px}.hero-buttons{flex-direction:column}.age-gate-card{padding:24px;margin:16px}}
 [hidden]{display:none !important}
@@ -211,6 +216,23 @@ a:hover{color:#7acbff;text-shadow:0 0 25px rgba(74,184,255,.2)}
 </div>
 </section>
 
+<!-- === НОВЫЙ БЛОК ПРЕВЬЮ ПРИЛОЖЕНИЯ (как во втором файле) === -->
+<section class="section">
+<div class="container">
+<div class="app-grid">
+<div>
+<span class="eyebrow">Предпросмотр</span>
+<h2 style="font-size:28px;color:#fff;margin:8px 0 16px">Мобильный клиент Lucky Bear Play</h2>
+<p style="color:#d0e4f8;margin-bottom:16px">Приложение Lucky Bear Play повторяет функционал сайта и дополняет его уникальными возможностями: биометрический вход, push-уведомления о бонусах и турнирах, быстрые депозиты в один тап, оптимизация под слабый интернет.</p>
+<p style="color:#d0e4f8">Приложение занимает около 25 МБ. Работает на Android 7.0+ и iOS 12.0+. После первого входа сессия сохраняется — повторный ввод логина не требуется.</p>
+</div>
+<div class="app-preview">
+<img src="images/app-preview.png" alt="Мобильное приложение Lucky Bear Play" loading="lazy">
+</div>
+</div>
+</div>
+</section>
+
 <section class="section">
 <div class="container">
 <div class="overview-nav">
@@ -237,10 +259,6 @@ a:hover{color:#7acbff;text-shadow:0 0 25px rgba(74,184,255,.2)}
 <p>Мобильное приложение Lucky Bear Play — это не просто адаптированная версия сайта. Это отдельный продукт, который мы разрабатывали с учётом пожеланий игроков. Приложение работает быстрее браузера, экономит мобильный трафик и предоставляет доступ к функциям, которых нет на сайте.</p>
 <p>В приложении доступны все игры каталога: видеослоты, live-казино, настольные игры, краш-игры и джекпоты. Вы можете пополнять счёт, выводить выигрыш, активировать бонусы и участвовать в турнирах. Всё то же, что и на сайте, но в более удобном формате для смартфона.</p>
 <p>Отдельно стоит сказать о push-уведомлениях. Вы можете настроить оповещения о новых бонусах, турнирах, персональных предложениях и статусе вывода. Это позволяет не пропускать важные события и вовремя активировать выгодные предложения.</p>
-
-<figure class="card-media">
-<img src="images/app-preview.png" alt="Приложение Lucky Bear Play" loading="lazy">
-</figure>
 
 <h3>Основные функции</h3>
 <ul>
@@ -321,7 +339,7 @@ a:hover{color:#7acbff;text-shadow:0 0 25px rgba(74,184,255,.2)}
 
 <h3>Что делать, если телефон потерян</h3>
 <ul>
-<li>Немедленно смените пароль от аккаунта через другой устройство.</li>
+<li>Немедленно смените пароль от аккаунта через другое устройство.</li>
 <li>Завершите все активные сессии в настройках безопасности.</li>
 <li>Обратитесь в поддержку, чтобы заблокировать аккаунт.</li>
 <li>Если включена 2FA, злоумышленник не сможет войти без кода.</li>
